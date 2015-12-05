@@ -13,6 +13,19 @@
 <link rel="import" href="../paper-input/paper-input-error.html">
 <link rel="import" href="../polymer/polymer.html">
 
+<!--
+Gives a paper-input the ability to be anchored in the page on blur.
+
+Exemple :
+    
+    <paper-input-anchor></paper-input-anchor>
+
+@group Paper Elements
+@element paper-input-anchor
+@hero hero.svg
+@demo demo/index.html
+-->
+
 <dom-module id="paper-input-anchor">
   <template>
     <style>
@@ -111,7 +124,7 @@
   Polymer({
     is: 'paper-input-anchor',
     properties: {
-      aborted: {
+      _aborted: {
         type: Boolean,
         value: false
       },
@@ -194,19 +207,19 @@
       }
     },
     _abort: function () {
-      this.aborted = true;
+      this._aborted = true;
       this.$.input.blur();
     },
     _confirm: function () {
       this.$.input.blur();
     },
     _onBlurInput: function() {
-      if (!this.aborted && this.inputValue) {
+      if (!this._aborted && this.inputValue) {
         this.value = this.inputValue;
         this.fire('rename', this.value);
       }
       this.inputState = false;
-      this.aborted = false;
+      this._aborted = false;
     }
   });
 </script>
