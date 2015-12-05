@@ -3,7 +3,6 @@
 <link rel="import" href="../neon-animation/neon-animation-runner-behavior.html">
 <link rel="import" href="../neon-animation/animations/fade-in-animation.html">
 <link rel="import" href="../neon-animation/animations/fade-out-animation.html">
-<link rel="import" href="../iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
 <link rel="import" href="../iron-input/iron-input.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../iron-form-element-behavior/iron-form-element-behavior.html">
@@ -34,6 +33,9 @@ Exemple :
         position: relative;
         height: 28px;
         @apply(--paper-font-common-base);
+      }
+      :host:focus {
+        outline: none;
       }
       input::-webkit-input-placeholder {
         color: var(--paper-input-container-color, --secondary-text-color);
@@ -160,17 +162,9 @@ Exemple :
       inputValue: {
         type: String,
         value: ''
-      },
-      keyEventTarget: {
-        type: Object,
-        value: function() {
-          return this.$.inputContainer;
-        }
       }
     },
     behaviors: [
-      Polymer.IronA11yKeysBehavior,
-      Polymer.IronControlState,
       Polymer.IronFormElementBehavior,
       Polymer.NeonAnimationRunnerBehavior,
       Polymer.PaperInputBehavior
