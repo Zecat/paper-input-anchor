@@ -9,3 +9,7 @@ If you press 'escape' without typing anything in the input, it  turns back into 
 ## Doc & demo
 
 See the [component page](http://zecat.github.io/paper-input-rename) for more information.
+
+## Todo
+
+	- fix: wait for the animation to finish before change the state
