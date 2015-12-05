@@ -17,15 +17,15 @@ Gives a paper-input the ability to be anchored in the page on blur.
 
 Exemple :
     
-    <paper-input-anchor></paper-input-anchor>
+    <paper-input-rename></paper-input-rename>
 
 @group Paper Elements
-@element paper-input-anchor
+@element paper-input-rename
 @hero hero.svg
 @demo demo/index.html
 -->
 
-<dom-module id="paper-input-anchor">
+<dom-module id="paper-input-rename">
   <template>
     <style>
       :host {
@@ -54,7 +54,7 @@ Exemple :
         @apply(--layout-fit);
         padding: 0;
       }
-      #anchor {
+      #text {
         @apply(--layout-fit);
         margin-top: 2px;
         cursor: pointer;
@@ -117,14 +117,14 @@ Exemple :
 
     </paper-input-container>
 
-    <div id="anchor" on-tap="openInput">[[value]]</div>
+    <div id="text" on-tap="openInput">[[value]]</div>
 
   </template>
 </dom-module>
 
 <script>
   Polymer({
-    is: 'paper-input-anchor',
+    is: 'paper-input-rename',
     properties: {
       _aborted: {
         type: Boolean,
@@ -147,11 +147,11 @@ Exemple :
               node: this.$.inputContainer
             },{
               name: 'fade-out-animation',
-              node: this.$.anchor
+              node: this.$.text
             }],
             'exit': [{
               name: 'fade-in-animation',
-              node: this.$.anchor
+              node: this.$.text
             },{
               name: 'fade-out-animation',
               node: this.$.inputContainer
@@ -184,7 +184,7 @@ Exemple :
         this.playAnimation('entry');
         this.$.input.focus();
       } else {
-        this.$.anchor.style.display = 'block';
+        this.$.text.style.display = 'block';
         this.playAnimation('exit');
       }
     },
@@ -193,10 +193,10 @@ Exemple :
     },
     _computeDisplay: function(e) {
       if (this.inputState) {
-        this.$.anchor.style.display = 'none';
+        this.$.text.style.display = 'none';
         this.$.inputContainer.style.display = 'block';
       } else {
-        this.$.anchor.style.display = 'block';
+        this.$.text.style.display = 'block';
         this.$.inputContainer.style.display = 'none';
       }
     },

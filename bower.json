@@ -1,5 +1,5 @@
 {
-  "name": "paper-input-anchor",
+  "name": "paper-input-rename",
   "version": "1.0.0",
   "authors": [
     "Zecat <jullienfelix@gmail.com>"
@@ -10,9 +10,9 @@
     "polymer",
     "seed"
   ],
-  "main": "paper-input-anchor.html",
+  "main": "paper-input-rename.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/Zecat/paper-input-anchor/",
+  "homepage": "https://github.com/Zecat/paper-input-rename/",
   "ignore": [
     "/.*",
     "/test/"
