@@ -1,0 +1,41 @@
+{
+  "name": "paper-input-rename",
+  "authors": [
+    "Zecat <jullienfelix@gmail.com>"
+  ],
+  "description": "Gives a paper-input the ability to be anchored in the page on blur.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "paper-input-rename.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/Zecat/paper-input-rename/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0",
+    "paper-input": "PolymerElements/paper-input#~1.1.1",
+    "iron-a11y-keys-behavior": "PolymerElements/iron-a11y-keys-behavior#~1.0.9",
+    "neon-animation": "PolymerElements/neon-animation#~1.0.8",
+    "iron-form-element-behavior": "PolymerElements/iron-form-element-behavior#~1.0.5",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.2.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "0572a366d8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0572a366d82c0916843738cafa3f98b4b4a3e45a"
+  },
+  "_source": "git://github.com/Zecat/paper-input-rename.git",
+  "_target": "master",
+  "_originalSource": "Zecat/paper-input-rename",
+  "_direct": true
+}
