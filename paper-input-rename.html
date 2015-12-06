@@ -166,6 +166,10 @@ Exemple :
       inputValue: {
         type: String,
         value: ''
+      },
+      eventName: {
+        type: String,
+        value: 'rename'
       }
     },
     behaviors: [
@@ -214,7 +218,7 @@ Exemple :
     _onBlurInput: function() {
       if (!this._aborted && this.inputValue) {
         this.value = this.inputValue;
-        this.fire('rename', this.value);
+        this.fire(this.eventName, this.value);
       }
       this.inputState = false;
       this._aborted = false;
